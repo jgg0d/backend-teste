@@ -19,19 +19,30 @@ app.get("/", (req, res) => {
 app.get("/clients", (req, res) => {
   res.status(200).json([
     {
-      nome: "João",
-      data_nascimento: "2002-02-02",
+      name: "João",
+      birth_date: "2002-02-02",
       cpf: "11122233398",
-      endereco: "Av. Avenida Brasil Brasil Brasil BrasilBrasil, centro, SP, CEP: 13444-002",
+      address: "Av. Avenida Brasil Brasil Brasil BrasilBrasil, centro, SP, CEP: 13444-002",
       status: "Ativo",
     },
     {
-      nome: "Maria",
-      data_nascimento: "2001-01-01",
+      name: "Maria",
+      birth_date: "2001-01-01",
       cpf: "44422233398",
-      endereco: "Rua 2, centro, SP, CEP: 13999-001",
+      address: "Rua 2, centro, SP, CEP: 13999-001",
       status: "Inativo",
     },
+  ]);
+});
+
+app.get("/companies", (req, res) => {
+  res.status(200).json([
+    {
+      corporate_name: "Razão Social",
+      fantasy_name: "Nome fantasia",
+      address: "Rua 3, centro, SP, CEP: 13999-003",
+      monetary_capital: 300000.99,
+    }
   ]);
 });
 
